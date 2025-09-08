@@ -6,14 +6,20 @@ using System.Threading.Tasks;
 
 namespace Proyecto_Gym.Domain
 {
-    internal class Rutina
+    public class Rutina
     {
-        private String nombre { get; set; }
-        private List<Ejercicio> ejercicios { get; set; }
-        public Rutina(String nombre, List<Ejercicio> ejercicios)
+        public int Id { get; set; }
+        public String nombre { get; set; }
+        public List<Ejercicio> ejercicios { get; set; }
+        public Rutina(int Id, String nombre, List<Ejercicio> ejercicios)
         {
+            this.Id = Id;
             this.nombre = nombre;
             this.ejercicios = ejercicios;
+        }
+        public Rutina()
+        {
+
         }
     }
 }

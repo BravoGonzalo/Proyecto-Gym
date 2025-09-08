@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Proyecto_Gym.Domain
 {
-    internal class EnumEjercicio
+    public class EnumEjercicio
     {
         public nombreEjercicio nombreEJ { get; set; }
         public enum nombreEjercicio

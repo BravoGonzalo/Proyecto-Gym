@@ -6,16 +6,22 @@ using System.Threading.Tasks;
 
 namespace Proyecto_Gym.Domain
 {
-    internal class Cliente : Persona
+    public class Cliente : Persona
     {
-        private bool pago { get; set; }
-        private List<Rutina> rutinaxdia { get; set; }
+        public int Id { get; set; }
+        public bool pago { get; set; }
+        public List<Rutina> rutinaxdia { get; set; }
 
-        public Cliente(int id, string nombre, string apellido, int dni, string direccion, int telefono, string email, sexo genero, bool pago, List<Rutina> rutinaxdia) 
-            : base(id, nombre, apellido, dni, direccion, telefono, email, genero)
+        public Cliente(int Id, string nombre, string apellido, int dni, string direccion, int telefono, string email, sexo genero, bool pago, List<Rutina> rutinaxdia) 
+            : base(nombre, apellido, dni, direccion, telefono, email, genero)
         {
+            this.Id = Id;
             this.pago = pago;
             this.rutinaxdia = rutinaxdia;
+        }
+        public Cliente()
+        {
+
         }
     }
 }
