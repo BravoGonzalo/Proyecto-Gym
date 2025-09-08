@@ -1,10 +1,72 @@
+using Microsoft.Data.SqlClient;
+using Proyecto_Gym.Business;
+using Proyecto_Gym.WinForms;
+
 namespace Proyecto_Gym
 {
     public partial class Form1 : Form
     {
-        public Form1()
+        private readonly ClienteService _clienteService;
+        private readonly EntrenadorService _entrenadorService;
+        public Form1(ClienteService clienteService, EntrenadorService entrenadorService)
         {
             InitializeComponent();
+            _clienteService = clienteService;
+            _entrenadorService = entrenadorService;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void botonLogin_Click(object sender, EventArgs e)
+        {
+            string email = textEmail.Text;
+            string password = textContraseña.Text;
+
+            // Primero buscamos en entrenadores
+            var entrenador = _entrenadorService.TraerTodos()
+                              .FirstOrDefault(en => en.email == email);
+
+            if (entrenador != null)
+            {
+                var formEntrenador = new EntrenadorForm(entrenador);
+                formEntrenador.Show();
+                this.Hide();
+                return;
+            }
+
+            // Después buscamos en clientes
+            var cliente = _clienteService.TraerTodos()
+                          .FirstOrDefault(cl => cl.email == email);
+
+            if (cliente != null)
+            {
+                var formCliente = new ClienteForm(cliente);
+                formCliente.Show();
+                this.Hide();
+                return;
+            }
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            var formRegister = new RegisterForm();
+            formRegister.Show();
+            this.Hide();
+            return;
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

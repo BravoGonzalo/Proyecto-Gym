@@ -10,7 +10,7 @@ namespace Proyecto_Gym.Domain
     {
         public int Id { get; set; }
         public List<Cliente> clientes { get; set; }
-        public Entrenador(int Id, string nombre, string apellido, int dni, string direccion, int telefono, string email, sexo genero, int id_Entrenador, List<Cliente> clientes) 
+        public Entrenador(int Id, string nombre, string apellido, long dni, string direccion, string telefono, string email, Sexo genero, int id_Entrenador, List<Cliente> clientes) 
             : base(nombre, apellido, dni, direccion, telefono, email, genero)
         {
             this.Id = Id;

@@ -17,13 +17,18 @@ namespace Proyecto_Gym.Business
             _repo = repo;
         }
 
+        public EntrenadorService()
+        {
+            _repo = new EntrenadorRepository();
+        }
+
         // Crear entrenador
         public void CrearEntrenador(Entrenador entrenador)
         {
             if (entrenador == null)
                 throw new ArgumentNullException("El entrenador no puede ser nulo");
 
-            if (string.IsNullOrEmpty(entrenador.Nombre))
+            if (string.IsNullOrEmpty(entrenador.nombre))
                 throw new Exception("El nombre es obligatorio");
 
             if (entrenador.clientes == null)

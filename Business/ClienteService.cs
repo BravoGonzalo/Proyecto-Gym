@@ -12,6 +12,10 @@ namespace Proyecto_Gym.Business
     {
         private readonly ClienteRepository _repo;
 
+        public ClienteService()
+        {
+            _repo = new ClienteRepository(); 
+        }
         public ClienteService(ClienteRepository repo)
         {
             _repo = repo;
@@ -76,4 +80,4 @@ namespace Proyecto_Gym.Business
         }
     }
 }
-}
+

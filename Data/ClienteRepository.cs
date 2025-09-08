@@ -16,6 +16,10 @@ namespace Proyecto_Gym.Data
         {
             _context = context;
         }
+        public ClienteRepository()
+        {
+            _context = new AppDbContext();
+        }
 
         // Agregar un cliente
         public void Add(Cliente cliente)

@@ -12,7 +12,7 @@ namespace Proyecto_Gym.Domain
         public bool pago { get; set; }
         public List<Rutina> rutinaxdia { get; set; }
 
-        public Cliente(int Id, string nombre, string apellido, int dni, string direccion, int telefono, string email, sexo genero, bool pago, List<Rutina> rutinaxdia) 
+        public Cliente(int Id, string nombre, string apellido, long dni, string direccion, string telefono, string email, Sexo genero, bool pago, List<Rutina> rutinaxdia) 
             : base(nombre, apellido, dni, direccion, telefono, email, genero)
         {
             this.Id = Id;

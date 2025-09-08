@@ -16,6 +16,11 @@ namespace Proyecto_Gym.Data
         {
             _context = context;
         }
+        public EntrenadorRepository()
+        {
+            _context = new AppDbContext();
+        }
+
 
         // Agregar entrenador
         public void Add(Entrenador entrenador)
