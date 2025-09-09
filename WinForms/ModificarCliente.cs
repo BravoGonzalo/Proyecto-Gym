@@ -52,17 +52,5 @@ namespace Proyecto_Gym.WinForms
                 MessageBox.Show("Error al modificar el cliente: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        private void dgvClientes_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0)
-            {
-                var id = (long)dgvClientes.Rows[e.RowIndex].Cells["Id"].Value;
-                var cliente = clienteService.TraerPorId(id);
-                var formModificar = new ModificarCliente(cliente);
-                formModificar.ShowDialog();
-                dgvClientes.DataSource = clienteService.TraerTodos();
-            }
-        }
     }
 }

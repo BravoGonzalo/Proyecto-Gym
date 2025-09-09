@@ -32,7 +32,11 @@ namespace Proyecto_Gym.WinForms
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            // Aquí deberías abrir un formulario para modificar el cliente seleccionado.
+            if (dgvClientes.CurrentRow == null) return;
+            int id = Convert.ToInt32(dgvClientes.CurrentRow.Cells["Id"].Value);
+            Cliente cliente = clienteService.TraerPorId(id);
+            var formModificar = new ModificarCliente(cliente);
+            formModificar.ShowDialog();
             dgvClientes.DataSource = clienteService.TraerTodos();
         }
 
