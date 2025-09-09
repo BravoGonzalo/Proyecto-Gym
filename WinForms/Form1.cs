@@ -31,7 +31,8 @@ namespace Proyecto_Gym
             string password = textContraseña.Text;
 
             var entrenador = _entrenadorService.TraerTodos()
-                              .FirstOrDefault(en => en.email == email);
+                              .FirstOrDefault(en => en.email == email
+                                                 && en.dni.ToString() == password);
 
             if (entrenador != null)
             {
@@ -42,7 +43,8 @@ namespace Proyecto_Gym
             }
 
             var cliente = _clienteService.TraerTodos()
-                          .FirstOrDefault(cl => cl.email == email);
+                          .FirstOrDefault(cl => cl.email == email
+                                              && cl.dni.ToString() == password);
 
             if (cliente != null)
             {
@@ -52,6 +54,10 @@ namespace Proyecto_Gym
                 return;
             }
 
+            MessageBox.Show("Email o contraseña incorrectos",
+                            "Error de inicio de sesión",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Error);
         }
 
         private void label4_Click(object sender, EventArgs e)

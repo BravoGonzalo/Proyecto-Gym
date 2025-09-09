@@ -43,7 +43,7 @@ namespace Proyecto_Gym.WinForms
                 clienteService.CrearCliente(cliente);
 
                 MessageBox.Show("Cliente registrado correctamente!", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close(); 
+                this.Close();
             }
             catch (Exception ex)
             {
@@ -64,7 +64,7 @@ namespace Proyecto_Gym.WinForms
                     telefono = txtTelefono.Text,
                     email = txtEmail.Text,
                     genero = (Sexo)cmbGenero.SelectedIndex,
-                    clientes = new List<Cliente>() 
+                    clientes = new List<Cliente>()
                 };
 
                 entrenadorService.CrearEntrenador(entrenador);
@@ -77,6 +77,5 @@ namespace Proyecto_Gym.WinForms
                 MessageBox.Show("Error al registrar entrenador: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
     }
 }
