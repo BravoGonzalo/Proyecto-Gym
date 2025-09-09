@@ -30,7 +30,6 @@ namespace Proyecto_Gym
             string email = textEmail.Text;
             string password = textContraseña.Text;
 
-            // Primero buscamos en entrenadores
             var entrenador = _entrenadorService.TraerTodos()
                               .FirstOrDefault(en => en.email == email);
 
@@ -42,7 +41,6 @@ namespace Proyecto_Gym
                 return;
             }
 
-            // Después buscamos en clientes
             var cliente = _clienteService.TraerTodos()
                           .FirstOrDefault(cl => cl.email == email);
 
