@@ -31,9 +31,6 @@ namespace Proyecto_Gym.Business
             if (string.IsNullOrEmpty(entrenador.nombre))
                 throw new Exception("El nombre es obligatorio");
 
-            if (entrenador.clientes == null)
-                entrenador.clientes = new List<Cliente>();
-
             _repo.Add(entrenador);
         }
 
@@ -51,7 +48,7 @@ namespace Proyecto_Gym.Business
             existente.telefono = entrenador.telefono;
             existente.email = entrenador.email;
             existente.genero = entrenador.genero;
-            existente.clientes = entrenador.clientes;
+           
 
             _repo.Update(existente);
         }

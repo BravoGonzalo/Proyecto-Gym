@@ -15,6 +15,13 @@ namespace Proyecto_Gym
             _entrenadorService = entrenadorService;
         }
 
+        public Form1()
+        {
+            InitializeComponent();
+            _clienteService = new ClienteService(); // O algún mock/dummy
+            _entrenadorService = new EntrenadorService(); // O algún mock/dummy
+        }
+
         private void label1_Click(object sender, EventArgs e)
         {
 

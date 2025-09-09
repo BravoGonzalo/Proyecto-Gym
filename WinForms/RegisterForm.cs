@@ -23,34 +23,7 @@ namespace Proyecto_Gym.WinForms
             clienteService = new ClienteService();
             entrenadorService = new EntrenadorService();
         }
-        private void btnRegistrarCliente_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                Cliente cliente = new Cliente
-                {
-                    nombre = txtNombre.Text,
-                    apellido = txtApellido.Text,
-                    dni = long.Parse(txtDni.Text),
-                    direccion = txtDireccion.Text,
-                    telefono = txtTelefono.Text,
-                    email = txtEmail.Text,
-                    genero = (Sexo)cmbGenero.SelectedIndex,
-                    pago = chkPago.Checked,
-                    rutinaxdia = new List<Rutina>()
-                };
-
-                clienteService.CrearCliente(cliente);
-
-                MessageBox.Show("Cliente registrado correctamente!", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al registrar cliente: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
+        
         private void btnRegistrarEntrenador_Click(object sender, EventArgs e)
         {
             try
@@ -64,18 +37,26 @@ namespace Proyecto_Gym.WinForms
                     telefono = txtTelefono.Text,
                     email = txtEmail.Text,
                     genero = (Sexo)cmbGenero.SelectedIndex,
-                    clientes = new List<Cliente>()
                 };
 
                 entrenadorService.CrearEntrenador(entrenador);
 
                 MessageBox.Show("Entrenador registrado correctamente!", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                var login = new Form1(); 
+                login.Show();
                 this.Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error al registrar entrenador: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnVolverLogin_Click(object sender, EventArgs e)
+        {
+            var loginForm = new Form1(); 
+            loginForm.Show();
+            this.Close();
         }
     }
 }

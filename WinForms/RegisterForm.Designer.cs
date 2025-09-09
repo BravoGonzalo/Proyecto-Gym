@@ -17,143 +17,195 @@
 
         private void InitializeComponent()
         {
-            this.lblTitulo = new Label();
-            this.lblNombre = new Label();
-            this.txtNombre = new TextBox();
-            this.lblApellido = new Label();
-            this.txtApellido = new TextBox();
-            this.lblDni = new Label();
-            this.txtDni = new TextBox();
-            this.lblDireccion = new Label();
-            this.txtDireccion = new TextBox();
-            this.lblTelefono = new Label();
-            this.txtTelefono = new TextBox();
-            this.lblEmail = new Label();
-            this.txtEmail = new TextBox();
-            this.lblGenero = new Label();
-            this.cmbGenero = new ComboBox();
-            this.chkPago = new CheckBox();
-            this.btnRegistrarCliente = new Button();
-            this.btnRegistrarEntrenador = new Button();
-
-            this.SuspendLayout();
-
+            lblTitulo = new Label();
+            lblNombre = new Label();
+            txtNombre = new TextBox();
+            lblApellido = new Label();
+            txtApellido = new TextBox();
+            lblDni = new Label();
+            txtDni = new TextBox();
+            lblDireccion = new Label();
+            txtDireccion = new TextBox();
+            lblTelefono = new Label();
+            txtTelefono = new TextBox();
+            lblEmail = new Label();
+            txtEmail = new TextBox();
+            lblGenero = new Label();
+            cmbGenero = new ComboBox();
+            btnRegistrarEntrenador = new Button();
+            btnVolverLogin = new Button();
+            SuspendLayout();
+            // 
             // lblTitulo
-            this.lblTitulo.Font = new Font("Roboto", 20F, FontStyle.Bold, GraphicsUnit.Point);
-            this.lblTitulo.Location = new Point(200, 20);
-            this.lblTitulo.Size = new Size(400, 40);
-            this.lblTitulo.Text = "Registro de Usuario";
-            this.lblTitulo.TextAlign = ContentAlignment.MiddleCenter;
-
+            // 
+            lblTitulo.Font = new Font("Roboto", 20F, FontStyle.Bold);
+            lblTitulo.Location = new Point(200, 20);
+            lblTitulo.Name = "lblTitulo";
+            lblTitulo.Size = new Size(400, 40);
+            lblTitulo.TabIndex = 0;
+            lblTitulo.Text = "Registro de Usuario";
+            lblTitulo.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // lblNombre
-            this.lblNombre.Text = "Nombre:";
-            this.lblNombre.Location = new Point(150, 80);
-            this.lblNombre.AutoSize = true;
-
+            // 
+            lblNombre.AutoSize = true;
+            lblNombre.Location = new Point(150, 80);
+            lblNombre.Name = "lblNombre";
+            lblNombre.Size = new Size(54, 15);
+            lblNombre.TabIndex = 1;
+            lblNombre.Text = "Nombre:";
+            // 
             // txtNombre
-            this.txtNombre.Location = new Point(300, 80);
-            this.txtNombre.Size = new Size(250, 23);
-
+            // 
+            txtNombre.Location = new Point(300, 80);
+            txtNombre.Name = "txtNombre";
+            txtNombre.Size = new Size(250, 23);
+            txtNombre.TabIndex = 2;
+            // 
             // lblApellido
-            this.lblApellido.Text = "Apellido:";
-            this.lblApellido.Location = new Point(150, 120);
-            this.lblApellido.AutoSize = true;
-
+            // 
+            lblApellido.AutoSize = true;
+            lblApellido.Location = new Point(150, 120);
+            lblApellido.Name = "lblApellido";
+            lblApellido.Size = new Size(54, 15);
+            lblApellido.TabIndex = 3;
+            lblApellido.Text = "Apellido:";
+            // 
             // txtApellido
-            this.txtApellido.Location = new Point(300, 120);
-            this.txtApellido.Size = new Size(250, 23);
-
+            // 
+            txtApellido.Location = new Point(300, 120);
+            txtApellido.Name = "txtApellido";
+            txtApellido.Size = new Size(250, 23);
+            txtApellido.TabIndex = 4;
+            // 
             // lblDni
-            this.lblDni.Text = "DNI:";
-            this.lblDni.Location = new Point(150, 160);
-            this.lblDni.AutoSize = true;
-
+            // 
+            lblDni.AutoSize = true;
+            lblDni.Location = new Point(150, 160);
+            lblDni.Name = "lblDni";
+            lblDni.Size = new Size(30, 15);
+            lblDni.TabIndex = 5;
+            lblDni.Text = "DNI:";
+            // 
             // txtDni
-            this.txtDni.Location = new Point(300, 160);
-            this.txtDni.Size = new Size(250, 23);
-
+            // 
+            txtDni.Location = new Point(300, 160);
+            txtDni.Name = "txtDni";
+            txtDni.Size = new Size(250, 23);
+            txtDni.TabIndex = 6;
+            // 
             // lblDireccion
-            this.lblDireccion.Text = "Dirección:";
-            this.lblDireccion.Location = new Point(150, 200);
-            this.lblDireccion.AutoSize = true;
-
+            // 
+            lblDireccion.AutoSize = true;
+            lblDireccion.Location = new Point(150, 200);
+            lblDireccion.Name = "lblDireccion";
+            lblDireccion.Size = new Size(60, 15);
+            lblDireccion.TabIndex = 7;
+            lblDireccion.Text = "Dirección:";
+            // 
             // txtDireccion
-            this.txtDireccion.Location = new Point(300, 200);
-            this.txtDireccion.Size = new Size(250, 23);
-
+            // 
+            txtDireccion.Location = new Point(300, 200);
+            txtDireccion.Name = "txtDireccion";
+            txtDireccion.Size = new Size(250, 23);
+            txtDireccion.TabIndex = 8;
+            // 
             // lblTelefono
-            this.lblTelefono.Text = "Teléfono:";
-            this.lblTelefono.Location = new Point(150, 240);
-            this.lblTelefono.AutoSize = true;
-
+            // 
+            lblTelefono.AutoSize = true;
+            lblTelefono.Location = new Point(150, 240);
+            lblTelefono.Name = "lblTelefono";
+            lblTelefono.Size = new Size(55, 15);
+            lblTelefono.TabIndex = 9;
+            lblTelefono.Text = "Teléfono:";
+            // 
             // txtTelefono
-            this.txtTelefono.Location = new Point(300, 240);
-            this.txtTelefono.Size = new Size(250, 23);
-
+            // 
+            txtTelefono.Location = new Point(300, 240);
+            txtTelefono.Name = "txtTelefono";
+            txtTelefono.Size = new Size(250, 23);
+            txtTelefono.TabIndex = 10;
+            // 
             // lblEmail
-            this.lblEmail.Text = "Email:";
-            this.lblEmail.Location = new Point(150, 280);
-            this.lblEmail.AutoSize = true;
-
+            // 
+            lblEmail.AutoSize = true;
+            lblEmail.Location = new Point(150, 280);
+            lblEmail.Name = "lblEmail";
+            lblEmail.Size = new Size(39, 15);
+            lblEmail.TabIndex = 11;
+            lblEmail.Text = "Email:";
+            // 
             // txtEmail
-            this.txtEmail.Location = new Point(300, 280);
-            this.txtEmail.Size = new Size(250, 23);
-
+            // 
+            txtEmail.Location = new Point(300, 280);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(250, 23);
+            txtEmail.TabIndex = 12;
+            // 
             // lblGenero
-            this.lblGenero.Text = "Género:";
-            this.lblGenero.Location = new Point(150, 320);
-            this.lblGenero.AutoSize = true;
-
+            // 
+            lblGenero.AutoSize = true;
+            lblGenero.Location = new Point(150, 320);
+            lblGenero.Name = "lblGenero";
+            lblGenero.Size = new Size(48, 15);
+            lblGenero.TabIndex = 13;
+            lblGenero.Text = "Género:";
+            // 
             // cmbGenero
-            this.cmbGenero.Location = new Point(300, 320);
-            this.cmbGenero.Size = new Size(250, 23);
-            this.cmbGenero.DropDownStyle = ComboBoxStyle.DropDownList;
-            this.cmbGenero.Items.AddRange(new object[] { "Masculino", "Femenino", "Indefinido" });
-
-            // chkPago
-            this.chkPago.Text = "Pago al día";
-            this.chkPago.Location = new Point(300, 360);
-            this.chkPago.AutoSize = true;
-
-            // btnRegistrarCliente
-            this.btnRegistrarCliente.Text = "Registrar Cliente";
-            this.btnRegistrarCliente.Location = new Point(200, 420);
-            this.btnRegistrarCliente.Size = new Size(150, 40);
-            this.btnRegistrarCliente.Click += btnRegistrarCliente_Click;
-
+            // 
+            cmbGenero.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbGenero.Items.AddRange(new object[] { "Masculino", "Femenino", "Indefinido" });
+            cmbGenero.Location = new Point(300, 320);
+            cmbGenero.Name = "cmbGenero";
+            cmbGenero.Size = new Size(250, 23);
+            cmbGenero.TabIndex = 14;
+            // 
             // btnRegistrarEntrenador
-            this.btnRegistrarEntrenador.Text = "Registrar Entrenador";
-            this.btnRegistrarEntrenador.Location = new Point(400, 420);
-            this.btnRegistrarEntrenador.Size = new Size(170, 40);
-            this.btnRegistrarEntrenador.Click += btnRegistrarEntrenador_Click;
-
+            // 
+            btnRegistrarEntrenador.Location = new Point(335, 382);
+            btnRegistrarEntrenador.Name = "btnRegistrarEntrenador";
+            btnRegistrarEntrenador.Size = new Size(170, 40);
+            btnRegistrarEntrenador.TabIndex = 17;
+            btnRegistrarEntrenador.Text = "Registrar Entrenador";
+            btnRegistrarEntrenador.Click += btnRegistrarEntrenador_Click;
+            // 
+            // btnVolverLogin
+            // 
+            btnVolverLogin.Font = new Font("Roboto", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnVolverLogin.Location = new Point(20, 20);
+            btnVolverLogin.Name = "btnVolverLogin";
+            btnVolverLogin.Size = new Size(120, 35);
+            btnVolverLogin.TabIndex = 18;
+            btnVolverLogin.Text = "Volver al Login";
+            btnVolverLogin.UseVisualStyleBackColor = true;
+            btnVolverLogin.Click += new EventHandler(btnVolverLogin_Click);
+            // 
             // RegisterForm
-            this.ClientSize = new Size(750, 500);
-            this.Controls.Add(this.lblTitulo);
-            this.Controls.Add(this.lblNombre);
-            this.Controls.Add(this.txtNombre);
-            this.Controls.Add(this.lblApellido);
-            this.Controls.Add(this.txtApellido);
-            this.Controls.Add(this.lblDni);
-            this.Controls.Add(this.txtDni);
-            this.Controls.Add(this.lblDireccion);
-            this.Controls.Add(this.txtDireccion);
-            this.Controls.Add(this.lblTelefono);
-            this.Controls.Add(this.txtTelefono);
-            this.Controls.Add(this.lblEmail);
-            this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.lblGenero);
-            this.Controls.Add(this.cmbGenero);
-            this.Controls.Add(this.chkPago);
-            this.Controls.Add(this.btnRegistrarCliente);
-            this.Controls.Add(this.btnRegistrarEntrenador);
-
-            this.FormBorderStyle = FormBorderStyle.FixedDialog;
-            this.StartPosition = FormStartPosition.CenterScreen;
-            this.Text = "Registro";
-
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            // 
+            ClientSize = new Size(750, 500);
+            Controls.Add(lblTitulo);
+            Controls.Add(lblNombre);
+            Controls.Add(txtNombre);
+            Controls.Add(lblApellido);
+            Controls.Add(txtApellido);
+            Controls.Add(lblDni);
+            Controls.Add(txtDni);
+            Controls.Add(lblDireccion);
+            Controls.Add(txtDireccion);
+            Controls.Add(lblTelefono);
+            Controls.Add(txtTelefono);
+            Controls.Add(lblEmail);
+            Controls.Add(txtEmail);
+            Controls.Add(lblGenero);
+            Controls.Add(cmbGenero);
+            Controls.Add(btnRegistrarEntrenador);
+            Controls.Add(btnVolverLogin);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            Name = "RegisterForm";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Registro";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -173,8 +225,7 @@
         private TextBox txtEmail;
         private Label lblGenero;
         private ComboBox cmbGenero;
-        private CheckBox chkPago;
-        private Button btnRegistrarCliente;
         private Button btnRegistrarEntrenador;
+        private System.Windows.Forms.Button btnVolverLogin;
     }
 }

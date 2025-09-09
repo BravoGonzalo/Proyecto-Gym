@@ -46,17 +46,13 @@ namespace Proyecto_Gym.Data
         // Traer entrenador por Id
         public Entrenador GetById(int id)
         {
-            return _context.Entrenadores
-                .Include(e => e.clientes) // Incluimos la lista de clientes
-                .FirstOrDefault(e => e.Id == id);
+            return _context.Entrenadores.FirstOrDefault(e => e.Id == id);
         }
 
         // Traer todos los entrenadores
         public List<Entrenador> GetAll()
         {
-            return _context.Entrenadores
-                .Include(e => e.clientes) // Incluimos la lista de clientes
-                .ToList();
+            return _context.Entrenadores.ToList();
         }
     }
 }
